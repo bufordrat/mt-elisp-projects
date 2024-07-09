@@ -1,4 +1,3 @@
-;; MATT's custom eshell prompt
 (defun mt-display-fishy-local-prompt (path)
   (require 'cl-lib)
   (cl-flet ((fish-abbreviate (path)
