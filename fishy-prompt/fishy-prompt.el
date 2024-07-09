@@ -1,3 +1,5 @@
+(require 'tramp)
+
 (defun mt-display-fishy-local-prompt (path)
   (require 'cl-lib)
   (cl-flet ((fish-abbreviate (path)
@@ -15,7 +17,6 @@
 	path-plus-bracket))))
 
 (defun mt-display-fishy-prompt (path)
-  (require 'tramp)
   (require 'cl-lib)
   (cl-flet ((mt-tramp-fn-p (filename)
 	      (string-match-p tramp-file-name-regexp filename)))
