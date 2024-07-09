@@ -43,7 +43,7 @@
 	 (families (--map (symbol-name (font-get it :family)) specs)))
     (-sort 'string< (seq-uniq families))))
 
-(setq default-sizes '(6 7 9 10 12 14 18 22 24))
+(setq default-sizes '(8 9 10 11 12 14 18 20 22 24 30 36 48))
 
 (setq default-size-strings
       (mapcar #'number-to-string default-sizes))
