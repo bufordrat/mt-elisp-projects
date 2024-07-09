@@ -1,3 +1,5 @@
+(require 'dash)
+
 (defun kw-bitmap-font-p (font-spec)
   (when (memq (font-get font-spec :spacing) '(100 M 110 C)) t))
 
@@ -43,10 +45,10 @@
 	 (families (--map (symbol-name (font-get it :family)) specs)))
     (-sort 'string< (seq-uniq families))))
 
-(setq default-sizes '(8 9 10 11 12 14 18 20 22 24 30 36 48))
+(defvar default-sizes '(8 9 10 11 12 14 18 20 22 24 30 36 48))
 
-(setq default-size-strings
-      (mapcar #'number-to-string default-sizes))
+(defvar default-size-strings
+  (mapcar #'number-to-string default-sizes))
 
 (defun mt-current-font-sizes ()
   (let* ((family (mt-current-font-family))
@@ -61,7 +63,6 @@
     (completing-read "New font: "
 		     (mt-all-font-families))))
   (set-face-font 'default font-string))
-
 
 (defun mt-change-font-size (font-string)
   (interactive
