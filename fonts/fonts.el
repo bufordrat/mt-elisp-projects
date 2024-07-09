@@ -20,7 +20,8 @@
   (font-spec :name xlfd))
 
 (defun mt-font-is-medium (spec)
-  (eq (font-get spec :weight) 'medium))
+  (or (eq (font-get spec :weight) 'medium)
+      (eq (font-get spec :weight) 'regular)))
 
 (defun mt-list-all-fonts (font-string)
   (let* ((xlfd-strings (x-list-fonts font-string))
