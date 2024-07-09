@@ -19,14 +19,14 @@
 (defun mt-xlfd-to-spec (xlfd)
   (font-spec :name xlfd))
 
-(defun mt-font-is-medium (spec)
+(defun mt-font-is-medium-regular (spec)
   (or (eq (font-get spec :weight) 'medium)
       (eq (font-get spec :weight) 'regular)))
 
 (defun mt-list-all-fonts (font-string)
   (let* ((xlfd-strings (x-list-fonts font-string))
 	 (specs (mapcar #'mt-xlfd-to-spec xlfd-strings))
-	 (only-mediums (seq-filter #'mt-font-is-medium specs)))
+	 (only-mediums (seq-filter #'mt-font-is-medium-regular specs)))
     only-mediums))
 
 (defun mt-spec-to-size (spec)
