@@ -65,6 +65,18 @@
 		     (mt-all-font-families))))
   (set-face-font 'default font-string))
 
+(defun mt-change-font-size-truetype (font-string)
+  (set-face-font 'default font-string))
+
+(defun mt-change-font-size-bitmap (size-string)
+  nil)
+
+(defun mt-change-font-size-old (newsize)
+  (let* ((current-spec (mt-current-font-spec))
+	 (_ (font-put current-spec :size newsize))
+	 (new-font-string (font-xlfd-name current-spec)))
+    (set-face-font 'default new-font-string)))
+
 (defun mt-change-font-size (font-string)
   (interactive
    (list
