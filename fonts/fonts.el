@@ -68,11 +68,10 @@
 (defun mt-change-font-size-truetype (font-string)
   (set-face-font 'default font-string))
 
-(defun mt-change-font-size-bitmap (size-string)
-  nil)
-
-(defun mt-change-font-size-old (newsize)
+(defun mt-change-font-size-bitmap (newsize)
   (let* ((current-spec (mt-current-font-spec))
+	 (_ (font-put current-spec :spacing nil))
+	 (_ (font-put current-spec :avgwidth nil))
 	 (_ (font-put current-spec :size newsize))
 	 (new-font-string (font-xlfd-name current-spec)))
     (set-face-font 'default new-font-string)))
@@ -82,5 +81,10 @@
    (list
     (completing-read "New size: "
 		     (mt-current-font-sizes))))
-  (set-face-font 'default font-string))
+  (let* ((current-spec (mt-current-font-spec))
+	 (is-bitmap (kw-bitmap-font-p current-spec))
+	 (size-int (string-to-number font-string)))
+    (if is-bitmap
+	(mt-change-font-size-bitmap size-int)
+      (mt-change-font-size-truetype font-string))))
 
