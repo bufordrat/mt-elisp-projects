@@ -1,3 +1,4 @@
+;; theme
 (load-theme 'badwolf)
 
 ;; bitmap font stuff for sequent
