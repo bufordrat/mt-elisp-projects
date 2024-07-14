@@ -18,8 +18,6 @@
 (show-paren-mode 1)
 (pdf-loader-install)
 
-
-
 ;; on Linux, super is Meta
 (cond
   ((eq 'gnu/linux system-type)
