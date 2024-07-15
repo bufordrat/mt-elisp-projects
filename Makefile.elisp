@@ -8,7 +8,7 @@ TEST =
 # files to install in a local lisp dir
 INSTALLED = $(EL) $(EL:.el=.elc)
 # directory in which to install $(INSTALLED)
-INSTALLDIR = /home/teichman/.emacs.d/lisp
+INSTALLDIR = /dev/null
 
 # path to proper emacs
 EMACS = emacs
