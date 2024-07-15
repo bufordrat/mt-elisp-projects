@@ -1,6 +1,3 @@
-;; theme
-(load-theme 'badwolf)
-
 ;; bitmap font stuff for sequent
 (defconst matt-default-font "Bok Montecarlo 12")
 (add-to-list 'default-frame-alist (cons 'font matt-default-font))

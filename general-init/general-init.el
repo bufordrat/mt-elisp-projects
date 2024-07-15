@@ -2,7 +2,6 @@
 (cd "~")
 
 ;; keybindings
-(global-set-key (kbd "C-+") 'text-scale-adjust) ; embiggen font
 (global-set-key (kbd "C-c v") 'visual-line-mode)
 (global-set-key (kbd "C-c f") #'mt-change-font-family)
 (global-set-key (kbd "C-c s") #'mt-change-font-size)
@@ -41,7 +40,7 @@
 (setq package-archive-priorities '(("kw" . 11) ("melpa-stable" . 10))) 
 
 ;; no defcustoms for these; sad
-(setq default-major-mode 'fundamental-mode
+(setq default-major-mode 'fundamental-mode)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
 
@@ -121,5 +120,6 @@
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
 ;; tint
-(dolist (f '(run-tint tint-mode tint-eval tint-eval-at-point))
+(dolist
+    (f '(run-tint tint-mode tint-eval tint-eval-at-point))
   (autoload f "tint" nil t))
