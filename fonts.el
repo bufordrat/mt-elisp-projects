@@ -21,8 +21,7 @@
 
 (defun mt-suitable-font-size-p (spec)
   (and (eq (font-get spec :width) 'normal)
-       (or (eq (font-get spec :weight) 'medium)
-	   (eq (font-get spec :weight) 'regular))))
+	   (eq (font-get spec :weight) 'regular)))
 
 (defun mt-list-all-fonts (font-string)
   (let* ((xlfd-strings (x-list-fonts font-string))
