@@ -1,5 +1,5 @@
 ;; modeline
-(add-hook 'after-init-hook #'doom-modeline-mode)
+;; (add-hook 'after-init-hook #'doom-modeline-mode)
 
 ;; dired
 (require 'nerd-icons)
