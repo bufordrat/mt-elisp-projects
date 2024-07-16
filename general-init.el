@@ -79,10 +79,6 @@
                           comint-watch-for-password-prompt))
             (setq-local comint-process-echoes t)))
 
-;; dired
-(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
-(with-demoted-errors "%s" (diredfl-global-mode +1))
-
 ;; org mode
 (add-hook 'org-mode-hook 'org-indent-mode)
 
