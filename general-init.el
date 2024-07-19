@@ -81,6 +81,7 @@
 
 ;; org mode
 (add-hook 'org-mode-hook 'org-indent-mode)
+(require 'org-tempo)
 
 ;; python
 (add-hook 'python-mode-hook 'eglot-ensure)
