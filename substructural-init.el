@@ -6,3 +6,5 @@
 ;; exec path from shell
 (exec-path-from-shell-initialize)
 
+;; haskell lsp
+(add-hook 'haskell-mode-hook 'eglot-ensure)
