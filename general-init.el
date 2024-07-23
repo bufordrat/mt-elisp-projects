@@ -15,7 +15,7 @@
 (size-indication-mode 1)
 (display-time)
 (show-paren-mode 1)
-(pdf-loader-install)
+;; (pdf-loader-install)
 
 ;; on Linux, super is Meta
 (cond
@@ -120,6 +120,9 @@
 (dolist
     (f '(run-tint tint-mode tint-eval tint-eval-at-point))
   (autoload f "tint" nil t))
+
+;; modeline
+(add-hook 'after-init-hook #'doom-modeline-mode)
 
 ;; dired
 (require 'nerd-icons)
