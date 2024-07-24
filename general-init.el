@@ -15,7 +15,6 @@
 (size-indication-mode 1)
 (display-time)
 (show-paren-mode 1)
-;; (pdf-loader-install)
 
 ;; on Linux, super is Meta
 (cond

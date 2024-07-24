@@ -13,3 +13,6 @@
     (set-face-font 'default "Misc Fixed 18"))
   (setq matt-embiggened-yet (not matt-embiggened-yet)))
 (global-set-key (kbd "<f10>") 'embiggen)
+
+;; load pdf tools
+(pdf-loader-install)

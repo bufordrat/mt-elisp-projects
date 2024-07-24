@@ -3,3 +3,5 @@
 (add-to-list 'default-frame-alist (cons 'font matt-default-font))
 (set-face-font 'default matt-default-font)
 
+;; load pdf tools
+(pdf-loader-install)
