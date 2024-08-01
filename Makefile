@@ -31,3 +31,4 @@ clean: $(SUBCLEANS)			## clean up build artifacts
 .el.elc:
 	$(BATCH) -f package-initialize $(foreach fn,$(LOADFILES),-l $(fn)) \
 	  -f batch-byte-compile $<
+	$(RM) $(EL:.el=.elc)
