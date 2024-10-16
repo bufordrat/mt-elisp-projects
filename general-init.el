@@ -116,6 +116,10 @@
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-to-list 'exec-path (expand-file-name "~/.ghcup/bin/"))
 
+;; agda
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
+
 ;; tint
 (dolist
     (f '(run-tint tint-mode tint-eval tint-eval-at-point))
