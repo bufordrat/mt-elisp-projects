@@ -117,8 +117,9 @@
 (add-to-list 'exec-path (expand-file-name "~/.ghcup/bin/"))
 
 ;; agda
-(load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "agda-mode locate")))
+(with-demoted-errors "%S"
+  (load-file (let ((coding-system-for-read 'utf-8))
+               (shell-command-to-string "agda-mode locate"))))
 
 ;; tint
 (dolist
