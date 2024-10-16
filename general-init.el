@@ -114,6 +114,7 @@
 
 ;; haskell
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-to-list 'exec-path (expand-file-name "~/.ghcup/bin/"))
 
 ;; tint
 (dolist
