@@ -136,3 +136,33 @@
 
 ;; (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (with-demoted-errors "%s" (diredfl-global-mode +1))
+
+;; setopts
+;;  (these used to be customizes, but were moved in here; see other .el
+;;   files for more domain-specific setopts)
+(setopt bbdb-file "~/bbdb/bbdb")
+(setopt backup-directory-alist '(("." . "~/.squiggles")))
+(setopt blink-cursor-mode nil)
+(setopt browse-url-browser-function 'eww-browse-url)
+(setopt comint-buffer-maximum-size 65336)
+(setopt confirm-kill-emacs nil)
+(setopt confirm-kill-processes nil)
+(setopt diff-switches "-u")
+(setopt dired-dwim-target t)
+(setopt dired-listing-switches "-alh")
+(setopt doom-modeline-hud t)
+(setopt doom-modeline-minor-modes t)
+(setopt doom-modeline-window-width-limit 60)
+(setopt epg-pinentry-mode 'loopback)
+(setopt magit-clone-set-remote.pushDefault t)
+(setopt magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+(setopt org-file-apps
+   '((auto-mode . emacs)
+     (directory . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . "firefox %s")
+     ("\\.pdf\\'" . default)))
+(setopt shell-file-name "/usr/bin/zsh")
+(setopt tooltip-mode nil)
+(setopt truncate-lines t)
+(setopt tuareg-opam-insinuate t)

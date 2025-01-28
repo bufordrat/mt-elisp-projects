@@ -38,3 +38,9 @@
     "~utop" "~utop/foo/bar/baz"
     "/home/teichman" "/home/teichman/dude" "/home/teichman/dude/bro"
     "/" "/usr" "~/usr/local" "/usr/local/bin"))
+
+
+;; setopts for this code
+(setopt eshell-prompt-function '(lambda nil (mt-display-fishy-prompt (eshell/pwd))))
+(setopt eshell-prompt-regexp "^[^#$>\12]* [#$>] ")
+
