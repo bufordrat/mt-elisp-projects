@@ -5,3 +5,6 @@
 
 ;; load pdf tools
 (pdf-loader-install)
+
+;; setopts
+(setopt x-super-keysym 'meta)

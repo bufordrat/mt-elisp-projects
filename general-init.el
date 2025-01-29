@@ -16,11 +16,6 @@
 (display-time)
 (show-paren-mode 1)
 
-;; on Linux, super is Meta
-(cond
-  ((eq 'gnu/linux system-type)
-   (setq x-super-keysym 'meta)))
-
 ;; menu bar stuff
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -140,8 +135,8 @@
 ;; setopts
 ;;  (these used to be customizes, but were moved in here; see other .el
 ;;   files for more domain-specific setopts)
-(setopt bbdb-file "~/bbdb/bbdb")
 (setopt backup-directory-alist '(("." . "~/.squiggles")))
+(setopt bbdb-file "~/bbdb/bbdb")
 (setopt blink-cursor-mode nil)
 (setopt browse-url-browser-function 'eww-browse-url)
 (setopt comint-buffer-maximum-size 65336)
@@ -162,6 +157,7 @@
      ("\\.mm\\'" . default)
      ("\\.x?html?\\'" . "firefox %s")
      ("\\.pdf\\'" . default)))
+(setopt ring-bell-function 'ignore)
 (setopt shell-file-name "/usr/bin/zsh")
 (setopt tooltip-mode nil)
 (setopt truncate-lines t)

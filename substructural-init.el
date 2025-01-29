@@ -5,3 +5,6 @@
 
 ;; haskell lsp
 (add-hook 'haskell-mode-hook 'eglot-ensure)
+
+;; setopts
+(setopt display-battery-mode t)

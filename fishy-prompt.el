@@ -43,4 +43,3 @@
 ;; setopts for this code
 (setopt eshell-prompt-function '(lambda nil (mt-display-fishy-prompt (eshell/pwd))))
 (setopt eshell-prompt-regexp "^[^#$>\12]* [#$>] ")
-
