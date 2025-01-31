@@ -18,4 +18,5 @@
 (pdf-loader-install)
 
 ;; setopts
+(setopt shell-file-name "/usr/bin/zsh")
 (setopt x-super-keysym 'meta)

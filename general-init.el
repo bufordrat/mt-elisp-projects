@@ -158,7 +158,6 @@
      ("\\.x?html?\\'" . "firefox %s")
      ("\\.pdf\\'" . default)))
 (setopt ring-bell-function 'ignore)
-(setopt shell-file-name "/usr/bin/zsh")
 (setopt tooltip-mode nil)
 (setopt truncate-lines t)
 (setopt tuareg-opam-insinuate t)

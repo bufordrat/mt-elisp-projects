@@ -8,3 +8,4 @@
 
 ;; setopts
 (setopt display-battery-mode t)
+(setopt shell-file-name "/bin/zsh")

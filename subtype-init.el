@@ -7,5 +7,6 @@
 (pdf-loader-install)
 
 ;; setopts
-(setopt x-super-keysym 'meta)
 (setopt display-battery-mode t)
+(setopt shell-file-name "/usr/bin/zsh")
+(setopt x-super-keysym 'meta)
