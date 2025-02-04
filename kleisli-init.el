@@ -7,5 +7,11 @@
 (pdf-loader-install)
 
 ;; setopts
+(setopt org-file-apps
+   '((auto-mode . emacs)
+     (directory . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . "firefox %s")
+     ("\\.pdf\\'" . default)))
 (setopt shell-file-name "/usr/bin/zsh")
 (setopt x-super-keysym 'meta)

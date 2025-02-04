@@ -151,12 +151,6 @@
 (setopt epg-pinentry-mode 'loopback)
 (setopt magit-clone-set-remote.pushDefault t)
 (setopt magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
-(setopt org-file-apps
-   '((auto-mode . emacs)
-     (directory . emacs)
-     ("\\.mm\\'" . default)
-     ("\\.x?html?\\'" . "firefox %s")
-     ("\\.pdf\\'" . default)))
 (setopt ring-bell-function 'ignore)
 (setopt tooltip-mode nil)
 (setopt truncate-lines t)
