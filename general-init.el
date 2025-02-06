@@ -135,6 +135,7 @@
 ;; setopts
 ;;  (these used to be customizes, but were moved in here; see other .el
 ;;   files for more domain-specific setopts)
+(setopt all-the-icons-dired-monochrome nil)
 (setopt backup-directory-alist '(("." . "~/.squiggles")))
 (setopt bbdb-file "~/bbdb/bbdb")
 (setopt blink-cursor-mode nil)
@@ -148,9 +149,11 @@
 (setopt doom-modeline-hud t)
 (setopt doom-modeline-minor-modes t)
 (setopt doom-modeline-window-width-limit 60)
+(setopt enable-recursive-minibuffers t)
 (setopt epg-pinentry-mode 'loopback)
 (setopt magit-clone-set-remote.pushDefault t)
 (setopt magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+(setopt proced-enable-color-flag t)
 (setopt ring-bell-function 'ignore)
 (setopt tooltip-mode nil)
 (setopt truncate-lines t)
