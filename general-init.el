@@ -6,8 +6,8 @@
 (global-set-key (kbd "C-c f") #'mt-change-font-family)
 (global-set-key (kbd "C-c s") #'mt-change-font-size)
 (global-set-key (kbd "C-c m") 'magit-clone)
-(global-set-key (kbd "C-<down>")   #'scroll-up-line)
-(global-set-key (kbd "C-<up>") #'scroll-down-line)
+(global-set-key (kbd "M-+")   #'scroll-up-line)
+(global-set-key (kbd "M-_") #'scroll-down-line)
 
 ;; function calls
 (winner-mode 1)
