@@ -111,48 +111,31 @@
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-to-list 'exec-path (expand-file-name "~/.ghcup/bin/"))
 
-;; agda
-(with-demoted-errors "%S"
-  (load-file (let ((coding-system-for-read 'utf-8))
-               (shell-command-to-string "agda-mode locate"))))
-
 ;; tint
 (dolist
     (f '(run-tint tint-mode tint-eval tint-eval-at-point))
   (autoload f "tint" nil t))
 
-;; modeline
-(add-hook 'after-init-hook #'doom-modeline-mode)
-
 ;; dired
-(require 'nerd-icons)
-(require 'nerd-icons-dired)
-(add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
 (with-demoted-errors "%s" (diredfl-global-mode +1))
 
-;; setopts
-;;  (these used to be customizes, but were moved in here; see other .el
-;;   files for more domain-specific setopts)
-(setopt all-the-icons-dired-monochrome nil)
-(setopt backup-directory-alist '(("." . "~/.squiggles")))
-(setopt bbdb-file "~/bbdb/bbdb")
-(setopt blink-cursor-mode nil)
-(setopt browse-url-browser-function 'eww-browse-url)
-(setopt comint-buffer-maximum-size 65336)
-(setopt confirm-kill-emacs nil)
-(setopt confirm-kill-processes nil)
-(setopt diff-switches "-u")
-(setopt dired-dwim-target t)
-(setopt dired-listing-switches "-alh")
-(setopt doom-modeline-hud t)
-(setopt doom-modeline-minor-modes t)
-(setopt doom-modeline-window-width-limit 60)
-(setopt enable-recursive-minibuffers t)
-(setopt epg-pinentry-mode 'loopback)
-(setopt magit-clone-set-remote.pushDefault t)
-(setopt magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
-(setopt proced-enable-color-flag t)
-(setopt ring-bell-function 'ignore)
-(setopt tooltip-mode nil)
-(setopt truncate-lines t)
-(setopt tuareg-opam-insinuate t)
+(setq all-the-icons-dired-monochrome nil)
+(setq backup-directory-alist '(("." . "~/.squiggles")))
+(setq bbdb-file "~/bbdb/bbdb")
+(setq blink-cursor-mode nil)
+(setq browse-url-browser-function 'eww-browse-url)
+(setq comint-buffer-maximum-size 65336)
+(setq confirm-kill-emacs nil)
+(setq confirm-kill-processes nil)
+(setq diff-switches "-u")
+(setq dired-dwim-target t)
+(setq dired-listing-switches "-alh")
+(setq enable-recursive-minibuffers t)
+(setq epg-pinentry-mode 'loopback)
+(setq magit-clone-set-remote.pushDefault t)
+(setq magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+(setq proced-enable-color-flag t)
+(setq ring-bell-function 'ignore)
+(setq tooltip-mode nil)
+(setq truncate-lines t)
+(setq tuareg-opam-insinuate t)
